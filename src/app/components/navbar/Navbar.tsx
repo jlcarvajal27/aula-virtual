@@ -25,7 +25,6 @@ const Navbar = () => {
         <div className="flex items-center justify-center gap-4 text-xl">
           <PiBellRinging />
           <MdOutlineMessage />
-
           <UserMenu />
         </div>
       </div>
