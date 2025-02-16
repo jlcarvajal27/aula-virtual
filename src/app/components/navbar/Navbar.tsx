@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { TfiEmail } from "react-icons/tfi";
 import { MdOutlineMessage } from "react-icons/md";
@@ -7,8 +10,9 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import UserMenu from "./UserMenu";
 
 const Navbar = () => {
+  const pathname = usePathname();
   return (
-    <nav className="px-10 py-0 w-full bg-gray-200 shadow-lg">
+    <nav className="px-10  w-full bg-gray-200 shadow-lg">
       <div className="flex items-center justify-between">
         <div className="flex gap-2 text-3xl">
           <IoNewspaperOutline />
@@ -31,19 +35,34 @@ const Navbar = () => {
 
       <div className="flex">
         <Link
-          className="m-2 p-2 mr-14 hover:underline hover:decoration-red-500 hover:underline-offset-4 hover:decoration-2"
+          className={`m-2 p-2 mr-14 hover:underline hover:decoration-red-500 hover:underline-offset-4 hover:decoration-2 
+          ${
+            pathname === "/"
+              ? "underline decoration-red-500 underline-offset-4 decoration-2"
+              : ""
+          }`}
           href="/"
         >
           Inicio
         </Link>
         <Link
-          className="m-2 p-2 hover:underline hover:decoration-red-500 hover:underline-offset-4 hover:decoration-2"
-          href="/my-courses"
+          className={`m-2 p-2 hover:underline hover:decoration-red-500 hover:underline-offset-4 hover:decoration-2 
+          ${
+            pathname === "/mycourses"
+              ? "underline decoration-red-500 underline-offset-4 decoration-2"
+              : ""
+          }`}
+          href="/mycourses"
         >
           Mis cursos
         </Link>
         <Link
-          className="m-2 p-2 hover:underline hover:decoration-red-500 hover:underline-offset-4 hover:decoration-2"
+          className={`m-2 p-2 hover:underline hover:decoration-red-500 hover:underline-offset-4 hover:decoration-2 
+          ${
+            pathname === "/certifications"
+              ? "underline decoration-red-500 underline-offset-4 decoration-2"
+              : ""
+          }`}
           href="/certifications"
         >
           Certificaciones
