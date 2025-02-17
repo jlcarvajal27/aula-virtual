@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="px-10  w-full bg-gray-200 shadow-lg">
-      <div className="flex justify-between items-center py-2">
+    <div className="px-10 w-full h-32 bg-gray-200 shadow-lg">
+      <div className="flex justify-between items-center">
         <ul className="flex flex-col gap-2">
           <li className="flex items-center gap-2">
             <TfiWorld className="text-2xl" />
@@ -39,10 +39,10 @@ const Footer = () => {
           />
         </div>
         <div className="flex flex-col gap-2 text-xl cursor-pointer">
-          <span>
+          <span className="text-3xl">
             <IoLogoFacebook />
           </span>
-          <span>
+          <span className="text-3xl">
             <FaSquareWhatsapp />
           </span>
         </div>

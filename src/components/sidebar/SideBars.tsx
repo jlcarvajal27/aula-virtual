@@ -1,7 +1,7 @@
 "use client";
 
 import { IoHome } from "react-icons/io5";
-import Dropdown from "./DropDown";
+import Dropdown from "./DropDownSideBar";
 import { useState } from "react";
 
 export const SideBars = () => {

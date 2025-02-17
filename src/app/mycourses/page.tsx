@@ -1,4 +1,4 @@
-import { SideBars } from "../components/sidebar/SideBars";
+import { SideBars } from "../../components/sidebar/SideBars";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { BsFillCameraReelsFill } from "react-icons/bs";

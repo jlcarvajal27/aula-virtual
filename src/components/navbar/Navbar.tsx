@@ -12,7 +12,7 @@ import UserMenu from "./UserMenu";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <nav className="px-10  w-full bg-gray-200 shadow-lg">
+    <nav className="px-10  w-full h-28 bg-gray-200 shadow-lg">
       <div className="flex items-center justify-between">
         <div className="flex gap-2 text-3xl">
           <IoNewspaperOutline />
@@ -59,11 +59,11 @@ const Navbar = () => {
         <Link
           className={`m-2 p-2 hover:underline hover:decoration-red-500 hover:underline-offset-4 hover:decoration-2 
           ${
-            pathname === "/certifications"
+            pathname === "/qualifications"
               ? "underline decoration-red-500 underline-offset-4 decoration-2"
               : ""
           }`}
-          href="/certifications"
+          href="/qualifications"
         >
           Certificaciones
         </Link>
