@@ -6,7 +6,7 @@ import { IoPersonSharp } from "react-icons/io5";
 const Page = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full p-8">
-      <h1 className="text-2xl font-bold mb-6">Qualifications</h1>
+      <h1 className="text-2xl font-bold mb-6">Calificaciones</h1>
 
       <div className="flex items-center justify-center gap-4 mb-6">
         <QualificationsDropdown />

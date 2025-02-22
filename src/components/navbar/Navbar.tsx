@@ -65,7 +65,7 @@ const Navbar = () => {
           }`}
           href="/qualifications"
         >
-          Certificaciones
+          Calificaciones
         </Link>
       </div>
     </nav>
