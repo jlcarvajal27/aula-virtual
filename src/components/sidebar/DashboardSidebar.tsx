@@ -1,31 +1,16 @@
 "use client";
 
 import { IoHome } from "react-icons/io5";
-import Dropdown from "./DropDownSideBar";
+
 import { useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
 
-export const SideBars = () => {
+export const DashboardSideBars = () => {
   const [closeSidebar, setCloseSidebar] = useState(false);
-  const [openDropdowns, setOpenDropdowns] = useState<{
-    [key: string]: boolean;
-  }>({
-    inicio: false,
-    unidad1: false,
-    unidad2: false,
-    unidad3: false,
-  });
 
   const toggleSidebar = () => {
     setCloseSidebar(!closeSidebar);
-  };
-
-  const toggleDropdown = (key: string) => {
-    setOpenDropdowns((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
   };
 
   return (
@@ -49,28 +34,7 @@ export const SideBars = () => {
 
       <div
         className={clsx("flex flex-col gap-2 mt-10", { hidden: closeSidebar })}
-      >
-        <Dropdown
-          title="Inicio"
-          isOpen={openDropdowns.inicio}
-          setIsOpen={() => toggleDropdown("inicio")}
-        />
-        <Dropdown
-          title="Unidad I"
-          isOpen={openDropdowns.unidad1}
-          setIsOpen={() => toggleDropdown("unidad1")}
-        />
-        <Dropdown
-          title="Unidad II"
-          isOpen={openDropdowns.unidad2}
-          setIsOpen={() => toggleDropdown("unidad2")}
-        />
-        <Dropdown
-          title="Unidad III"
-          isOpen={openDropdowns.unidad3}
-          setIsOpen={() => toggleDropdown("unidad3")}
-        />
-      </div>
+      ></div>
     </div>
   );
 };

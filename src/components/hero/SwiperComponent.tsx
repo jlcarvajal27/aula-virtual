@@ -18,23 +18,37 @@ const SwiperComponent = () => {
       spaceBetween={50}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
     >
       <SwiperSlide>
-        <div className="flex h-full w-full items-center justify-center gap-4">
-          <Image src="/images/aula-1.webp" alt="Imagen del aula 1" fill />
+        <div className=" relative flex h-full w-full items-center justify-center gap-4">
+          <Image
+            src="/images/aula-1.webp"
+            alt="Imagen del aula 1"
+            fill
+            className="object-cover"
+          />
         </div>
       </SwiperSlide>
 
       <SwiperSlide>
         <div className="flex h-full w-full items-center justify-center gap-4">
-          <Image src="/images/aula-2.png" alt="Imagen del aula 2" fill />
+          <Image
+            src="/images/aula-2.png"
+            alt="Imagen del aula 2"
+            fill
+            className="object-cover"
+          />
         </div>
       </SwiperSlide>
 
       <SwiperSlide>
         <div className="flex h-full w-full items-center justify-center gap-4">
-          <Image src="/images/aula-3.jpg" alt="Imagen del aula 3" fill />
+          <Image
+            src="/images/aula-3.jpg"
+            alt="Imagen del aula 3"
+            fill
+            className="object-cover"
+          />
         </div>
       </SwiperSlide>
     </Swiper>
