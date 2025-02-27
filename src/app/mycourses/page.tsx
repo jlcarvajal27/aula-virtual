@@ -6,14 +6,16 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 import { BsFillCameraReelsFill } from "react-icons/bs";
 import { useState } from "react";
 import Modal from "@/components/modal/Modal";
+import { DashboardSideBars } from "@/components/sidebar/DashboardSidebar";
 
 export default function MyCoursesPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpen2, setIsModalOpen2] = useState(false);
 
   return (
-    <div className="flex">
+    <div className="flex h-full">
       <SideBars />
+
       <div className="flex flex-col w-full p-4 gap-10">
         <h1 className="flex items-center justify-center p-4 rounded-md text-2xl text-white font-bold bg-slate-800 mb-8">
           Habilidades digitales para el siglo XXI
@@ -113,6 +115,9 @@ export default function MyCoursesPage() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="absolute right-0 top-28 z-50">
+        <DashboardSideBars />
       </div>
     </div>
   );
